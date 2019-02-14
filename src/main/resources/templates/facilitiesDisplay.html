@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link href="styles.css" rel="stylesheet" />
+<title>Facilities</title>
+</head>
+<body>
+	<h2>List of Facilities</h2>
+	
+	<table>
+		<tr>
+			<th>ID</th>
+			<th>Abbreviation</th>
+			<th>Terminal Name</th>
+			<th>Region</th>
+			<th>City Name</th>
+			<th>State Code</th>
+			<th>Postal Code</th>
+			<th>Country Code</th>
+			<th>Area Code</th>
+			<th>Address 1</th>
+			<th>Address 2</th>
+			<th>Address 3</th>
+			<th>Phone #</th>
+		</tr>
+		<tr th:each = "facility: ${facilities}">
+			<td th:text = "${facility.id}">...</td>
+			<td th:text = "${facility.abbr}">...</td>
+			<td th:text = "${facility.terminalName}">...</td>
+			<td th:text = "${facility.region}">...</td>
+			<td th:text = "${facility.cityName}">...</td>
+			<td th:text = "${facility.stateCode}">...</td>
+			<td th:text = "${facility.postalCode}">...</td>
+			<td th:text = "${facility.countryCode}">...</td>
+			<td th:text = "${facility.areaCode}">...</td>
+			<td th:text = "${facility.address1}">...</td>
+			<td th:text = "${facility.address2}">...</td>
+			<td th:text = "${facility.address3}">...</td>
+			<td th:text = "${facility.phoneNumber}">...</td>
+		</tr>
+				
+	</table>
+
+</body>
+</html>
